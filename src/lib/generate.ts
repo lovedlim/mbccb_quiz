@@ -37,9 +37,9 @@ function cleanText(raw: string, { singleLine = false } = {}): string {
   return unescaped.replace(/\n{3,}/g, "\n\n").trim();
 }
 
-// gpt-5.6-luna 가 기본. 이 정도 난이도의 출제에는 충분하면서 가장 싸다.
-// 더 좋은 문항이 필요하면 OPENAI_MODEL 로 gpt-5.5 나 gpt-6-astra 를 지정한다.
-const MODEL = process.env.OPENAI_MODEL ?? "gpt-5.6-luna";
+// gpt-6-astra 가 기본. 문항 품질을 우선한다.
+// 비용을 줄이려면 OPENAI_MODEL 로 gpt-5.6-luna 를 지정한다.
+const MODEL = process.env.OPENAI_MODEL ?? "gpt-6-astra";
 
 const DIFFICULTY_GUIDE: Record<Difficulty, string> = {
   easy: "해당 주제를 처음 접한 학습자도 강의를 들었다면 풀 수 있는 수준. 용어의 정의와 기본 개념 위주.",
