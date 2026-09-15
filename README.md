@@ -49,6 +49,16 @@
 
 ![학습자 응시 화면](docs/screenshots/05-play.webp)
 
+### 채점 결과 — `/play/[code]`
+
+제출하면 같은 주소에서 결과 화면으로 바뀝니다. 점수·순위·걸린 시간이 맨 위에 뜨고, 리더보드에서 내 줄이 강조됩니다.
+
+![채점 결과 화면 — 점수·순위·리더보드](docs/screenshots/06-result.webp)
+
+아래로 내리면 문항별 리뷰가 이어집니다. 정답은 초록, 내가 틀리게 고른 답은 주홍으로 표시되고 해설이 붙습니다.
+
+![문항별 리뷰 — 정답·오답과 해설](docs/screenshots/07-review.webp)
+
 ## 구성
 
 - **Next.js 16** (App Router, Turbopack)
@@ -63,7 +73,7 @@
 |------|-----------|------|
 | `DATABASE_URL` | 필수 | Neon 연동 시 자동 등록 |
 | `OPENAI_API_KEY` | 필수 | 퀴즈 생성에 사용 |
-| `OPENAI_MODEL` | 선택 | 문항 생성 모델. 기본 `gpt-5.6-luna`. 더 좋은 문항이 필요하면 `gpt-5.5` 나 `gpt-6-astra` |
+| `OPENAI_MODEL` | 선택 | 문항 생성 모델. 기본 `gpt-6-astra`(문항 품질 우선). 비용을 줄이려면 `gpt-5.6-luna` |
 | `OPENAI_IMAGE_MODEL` | 선택 | 썸네일 모델. 기본 `gpt-image-2`. 더 싸게 가려면 `gpt-image-1-mini` |
 | `QUIZ_IMAGE_STYLE` | 선택 | 기본 3D 클레이 렌더. `flat` 으로 두면 평면 일러스트 |
 
