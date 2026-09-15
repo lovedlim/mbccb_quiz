@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // 소개 영상(Remotion)은 별도 패키지다
+    "video/**",
   ]),
 ]);
 
